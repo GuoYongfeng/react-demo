@@ -6,7 +6,7 @@ var MarkdownEditor = React.createClass({
   displayName: "MarkdownEditor",
 
   getInitialState: function getInitialState() {
-    return { value: 'Type some *markdown* here!' };
+    return { value: '请在此编辑md片段...' };
   },
   handleChange: function handleChange() {
     this.setState({ value: this.refs.textarea.getDOMNode().value });
@@ -18,7 +18,7 @@ var MarkdownEditor = React.createClass({
       React.createElement(
         "h3",
         null,
-        "Input"
+        "输入"
       ),
       React.createElement("textarea", {
         onChange: this.handleChange,
@@ -27,7 +27,7 @@ var MarkdownEditor = React.createClass({
       React.createElement(
         "h3",
         null,
-        "Output"
+        "输出"
       ),
       React.createElement("div", {
         className: "content",
@@ -39,4 +39,4 @@ var MarkdownEditor = React.createClass({
   }
 });
 
-ReactDOM.render(React.createElement(MarkdownEditor, null), mountNode);
+ReactDOM.render(React.createElement(MarkdownEditor, null), document.getElementById('example'));

@@ -11,10 +11,12 @@ var FormApp = React.createClass({
     },
     handleSubmit:function(e){
         e.preventDefault();
+        // 获取表单的值
+        // this.refs可以直接操作DOM
         var formData = {
-            input: this.refs.goodInput.getDOMNode().value,
-            select: this.refs.goodSelect.getDOMNode().value,
-            textarea: this.refs.goodTextarea.getDOMNode().value,
+            input: this.refs.goodInput.value,
+            select: this.refs.goodSelect.value,
+            textarea: this.refs.goodTextarea.value,
             radio: this.state.radioValue,
             check: this.state.checkValues,
         }
@@ -75,7 +77,7 @@ var FormApp = React.createClass({
 // 定义单选框按钮组
 var RadioButtons = React.createClass({
     saySomething:function(){
-        alert("yo what's up man!");
+        alert("success");
     },
     render:function(){
         return (
@@ -91,6 +93,7 @@ var RadioButtons = React.createClass({
     }
 });
 
+// 定义复选框组件
 var Checkboxes = React.createClass({
     render: function(){
         return (
@@ -106,5 +109,5 @@ var Checkboxes = React.createClass({
     }
 })
 
-
-ReactDOM.render(<FormApp />, document.getElementById('app'));
+// 渲染
+ReactDOM.render(<FormApp />, document.getElementById('example'));

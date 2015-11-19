@@ -11,7 +11,6 @@ var ClickApp = React.createClass({
         this.setState({
             clickCount: this.state.clickCount + 1
         });
-        console.log(e.nativeEvent);
     },
     render: function render() {
         return React.createElement(
@@ -37,4 +36,4 @@ var ClickApp = React.createClass({
     }
 });
 
-ReactDOM.render(React.createElement(ClickApp, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(ClickApp, null), document.getElementById('example'));

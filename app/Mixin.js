@@ -63,5 +63,5 @@ var Submessage = React.createClass({
 
 // 使用组件
 ReactDOM.render( <MessageBox/>,
-    document.getElementById('app')
+    document.getElementById('example')
 )

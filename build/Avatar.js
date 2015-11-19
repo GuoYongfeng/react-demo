@@ -1,40 +1,43 @@
 // 定义一个头像avatar的组件
-'use strict';
+"use strict";
 
 var Avatar = React.createClass({
-  displayName: 'Avatar',
+  displayName: "Avatar",
 
   render: function render() {
     return React.createElement(
-      'div',
+      "div",
       null,
-      React.createElement(ProfilePic, { username: this.props.username }),
-      React.createElement(ProfileLink, { username: this.props.username })
+      React.createElement(ProfilePic, { link: this.props.link }),
+      React.createElement(ProfileLink, { name: this.props.name })
     );
   }
 });
 
 // 定义一个人物图片ProfilePic组件
 var ProfilePic = React.createClass({
-  displayName: 'ProfilePic',
+  displayName: "ProfilePic",
 
   render: function render() {
-    return React.createElement('img', { src: 'http://graph.facebook.com/' + this.props.username + '/picture' });
+    return React.createElement("img", { src: this.props.link });
   }
 });
 
 // 定义一个人物链接ProfileLink组件
 var ProfileLink = React.createClass({
-  displayName: 'ProfileLink',
+  displayName: "ProfileLink",
 
   render: function render() {
     return React.createElement(
-      'a',
-      { href: 'http://www.facebook.com/' + this.props.username },
-      this.props.username
+      "a",
+      { href: 'https://github.com/' + this.props.name },
+      this.props.name
     );
   }
 });
 
 // 渲染到容器
-ReactDOM.render(React.createElement(Avatar, { username: 'pwh' }), document.getElementById('example'));
+ReactDOM.render(React.createElement(Avatar, {
+  name: "GuoYongfeng",
+  link: "https://avatars2.githubusercontent.com/u/8686869?v=3&s=460"
+}), document.getElementById('example'));

@@ -80,4 +80,4 @@ var Submessage = React.createClass({
 });
 
 // 使用组件
-ReactDOM.render(React.createElement(MessageBox, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(MessageBox, null), document.getElementById('example'));

@@ -1,22 +1,22 @@
 // 定义一个组件LikeButton
 var LikeButton = React.createClass({
   getInitialState: function() {
-    return {liked: false};
+    return {liked: true};
   },
   handleClick: function(event) {
     this.setState({liked: !this.state.liked});
   },
   render: function() {
-    var text = this.state.liked ? 'like' : 'haven\'t liked';
+    var text = this.state.liked ? '爱' : '不爱';
     return (
       <p onClick={this.handleClick}>
-        You {text} this. Click to toggle.
+        你{text}我.
       </p>
     );
   }
 });
 
-React.render(
+ReactDOM.render(
   <LikeButton />,
   document.getElementById('example')
 );

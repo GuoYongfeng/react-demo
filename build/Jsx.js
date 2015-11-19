@@ -1,5 +1,8 @@
-// demo1：jsx_demo1.html
-
+/**
+ * [createClass description]
+ * @param  {[type]} {               render: function( [description]
+ * @return {[type]}   [description]
+ */
 "use strict";
 
 var MyList = React.createClass({
@@ -9,9 +12,7 @@ var MyList = React.createClass({
     return React.createElement(
       "ul",
       null,
-
-      /* 遍历this.props.children */
-      this.props.children.map(function (child) {
+      this.props.list.map(function (child) {
         return React.createElement(
           "li",
           null,
@@ -21,17 +22,15 @@ var MyList = React.createClass({
     );
   }
 });
-ReactDOM.render(React.createElement(
-  MyList,
-  null,
-  React.createElement(
-    "a",
-    { href: "https://www.facebook.com/" },
-    "https://www.facebook.com/"
-  ),
-  React.createElement(
-    "a",
-    { href: "https://twitter.com/" },
-    "https://twitter.com/"
-  )
-), document.getElementById('example'));
+
+var TagList = [React.createElement(
+  "a",
+  { href: "#" },
+  "Facebook"
+), React.createElement(
+  "a",
+  { href: "#" },
+  "Google"
+)];
+
+ReactDOM.render(React.createElement(MyList, { list: TagList }), document.getElementById('example'));

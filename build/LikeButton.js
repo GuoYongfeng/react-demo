@@ -5,21 +5,21 @@ var LikeButton = React.createClass({
   displayName: 'LikeButton',
 
   getInitialState: function getInitialState() {
-    return { liked: false };
+    return { liked: true };
   },
   handleClick: function handleClick(event) {
     this.setState({ liked: !this.state.liked });
   },
   render: function render() {
-    var text = this.state.liked ? 'like' : 'haven\'t liked';
+    var text = this.state.liked ? '爱' : '不爱';
     return React.createElement(
       'p',
       { onClick: this.handleClick },
-      'You ',
+      '你',
       text,
-      ' this. Click to toggle.'
+      '我.'
     );
   }
 });
 
-React.render(React.createElement(LikeButton, null), document.getElementById('example'));
+ReactDOM.render(React.createElement(LikeButton, null), document.getElementById('example'));

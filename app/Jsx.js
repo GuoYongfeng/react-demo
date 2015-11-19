@@ -1,12 +1,14 @@
-// demo1：jsx_demo1.html
-
+/**
+ * [createClass description]
+ * @param  {[type]} {               render: function( [description]
+ * @return {[type]}   [description]
+ */
 var MyList = React.createClass({
   render: function() {
     return (
       <ul>
         {
-          /* 遍历this.props.children */
-          this.props.children.map(function (child) {
+          this.props.list.map(function (child) {
             return <li>{child}</li>
           })
         }
@@ -14,10 +16,13 @@ var MyList = React.createClass({
     );
   }
 });
+
+var TagList = [
+  <a href="#">Facebook</a>,
+  <a href="#">Google</a>
+];
+
 ReactDOM.render(
-  <MyList>
-    <a href="https://www.facebook.com/">https://www.facebook.com/</a>
-    <a href="https://twitter.com/">https://twitter.com/</a>
-  </MyList>,
+  <MyList list={TagList} />,
   document.getElementById('example')
 );

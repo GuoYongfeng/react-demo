@@ -3,8 +3,8 @@ var Avatar = React.createClass({
   render: function() {
     return (
       <div>
-        <ProfilePic username={this.props.username} />
-        <ProfileLink username={this.props.username} />
+        <ProfilePic link={this.props.link} />
+        <ProfileLink name={this.props.name} />
       </div>
     );
   }
@@ -14,7 +14,7 @@ var Avatar = React.createClass({
 var ProfilePic = React.createClass({
   render: function() {
     return (
-      <img src={'http://graph.facebook.com/' + this.props.username + '/picture'} />
+      <img src={this.props.link} />
     );
   }
 });
@@ -23,8 +23,8 @@ var ProfilePic = React.createClass({
 var ProfileLink = React.createClass({
   render: function() {
     return (
-      <a href={'http://www.facebook.com/' + this.props.username}>
-        {this.props.username}
+      <a href={'https://github.com/' + this.props.name}>
+        {this.props.name}
       </a>
     );
   }
@@ -32,6 +32,9 @@ var ProfileLink = React.createClass({
 
 // 渲染到容器
 ReactDOM.render(
-  <Avatar username="pwh" />,
+  <Avatar
+    name="GuoYongfeng"
+    link="https://avatars2.githubusercontent.com/u/8686869?v=3&s=460"
+  />,
   document.getElementById('example')
 );
