@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../vendors/react/react.js"></script>
+    <script src="../vendors/react/react-dom.js"></script>
+    <!-- browser.js 的作用是将 JSX 语法转为 JavaScript 语法 -->
+    <script src="../vendors/babel/browser.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <!-- JSX 语法，跟 JavaScript 不兼容。凡是使用 JSX 的地方，都要加上 type="text/babel" -->
+    <script type="text/babel">
+      var MyComponent = React.createClass({
+          render: function (){
+            return (
+              <h1 className="header">我的第一个组件</h1>
+            )
+          }
+      });
+      ReactDOM.render(<MyComponent />, document.getElementById('example'));
+    </script>
+  </body>
+</html>

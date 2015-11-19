@@ -4,7 +4,7 @@
   "description": "reactjs",
   "main": "index.js",
   "scripts": {
-    "test": "dev"
+    "build": "babel -wd build app"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/GuoYongfeng/react-demo/issues"
   },
-  "homepage": "https://github.com/GuoYongfeng/react-demo#readme"
+  "homepage": "https://github.com/GuoYongfeng/react-demo#readme",
+  "dependencies": {
+    "babel": "^6.1.18"
+  },
+  "devDependencies": {
+    "babel-preset-stage-2": "^6.1.18"
+  }
 }
