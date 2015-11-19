@@ -1,0 +1,23 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "description": "reactjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuoYongfeng/react-demo.git"
+  },
+  "keywords": [
+    "reactjs",
+    "demo"
+  ],
+  "author": "GuoYongfeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuoYongfeng/react-demo/issues"
+  },
+  "homepage": "https://github.com/GuoYongfeng/react-demo#readme"
+}
