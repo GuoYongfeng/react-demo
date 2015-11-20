@@ -1,0 +1,27 @@
+{
+  "name": "react-demo",
+  "version": "0.0.1",
+  "description": "react",
+  "keywords": [
+    "react"
+  ],
+  "authors": [
+    "GuoYongfeng"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "babel": "*",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "react": "~0.14.3",
+    "showdown": "~1.3.0"
+  }
+}

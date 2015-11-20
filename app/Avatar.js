@@ -1,3 +1,4 @@
+
 // 定义一个头像avatar的组件
 var Avatar = React.createClass({
   render: function() {
