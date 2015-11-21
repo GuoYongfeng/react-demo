@@ -1,6 +1,7 @@
 // 定义一个按钮组件
 var BootstrapButton = React.createClass({
   render: function() {
+    console.log(this.props);
     return (
       <a {...this.props}
         href="javascript:;"

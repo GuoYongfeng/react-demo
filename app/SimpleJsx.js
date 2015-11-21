@@ -1,5 +1,7 @@
-// demo2：simple_jsx.html
-
+/**
+ * [MyData description]
+ * @type {Array}
+ */
 var MyData = ['React', 'is', 'awesome'],
     MyStyles = {
       color: "#333",

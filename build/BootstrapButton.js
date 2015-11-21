@@ -7,6 +7,7 @@ var BootstrapButton = React.createClass({
   displayName: "BootstrapButton",
 
   render: function render() {
+    console.log(this.props);
     return React.createElement("a", _extends({}, this.props, {
       href: "javascript:;",
       role: "button",

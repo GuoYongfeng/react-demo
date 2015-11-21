@@ -1,13 +1,21 @@
-var converter = new Showdown.converter();
+var converter = new showdown.Converter();
 
 var MarkdownEditor = React.createClass({
   getInitialState: function() {
-    return {value: '请在此编辑md片段...'};
+    return {value: '# 我是一级大标题'};
   },
   handleChange: function() {
-    this.setState({value: this.refs.textarea.getDOMNode().value});
+    this.setState({value: this.refs.textarea.value});
   },
+  conponentDidMount: function(){
+    console.log(this.refs.textarea);
+  },
+
   render: function() {
+    // dangerouslySetInnerHTML这种功能主要用来与 DOM 字符串操作类库一起使用，
+    // 所以提供的 HTML 必须要格式清晰
+    console.log(converter.makeHtml(this.state.value));
+    
     return (
       <div className="MarkdownEditor">
         <h3>输入</h3>

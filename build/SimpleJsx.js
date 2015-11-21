@@ -1,5 +1,7 @@
-// demo2：simple_jsx.html
-
+/**
+ * [MyData description]
+ * @type {Array}
+ */
 'use strict';
 
 var MyData = ['React', 'is', 'awesome'],

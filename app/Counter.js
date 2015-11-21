@@ -1,5 +1,10 @@
-// demo: jsx_compile.html
-
+/**
+ * [Counter]
+ * @param  {Boolean}                  [description]
+ * @param  {[type]}                   [description]
+ * @param  {[type]}                   [description]
+ * @return {[type]}                   [description]
+ */
 var Counter = React.createClass({
   // 相当于是规范化的接口文档
   propTypes: {
@@ -15,8 +20,17 @@ var Counter = React.createClass({
       return {clickCount: state.clickCount + 1};
     });
   },
+  
   render: function () {
-    return (<h2 onClick={this.handleClick}>点我点我! <br />被戳次数: {this.state.clickCount}</h2>);
+    return (
+      <div>
+        <p>{this.props.name}</p>
+        <h2 onClick={this.handleClick}>
+        点我点我! <br />被戳次数: {this.state.clickCount}
+        </h2>
+      </div>
+
+    );
   }
 });
 

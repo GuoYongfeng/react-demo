@@ -1,5 +1,10 @@
-// demo: jsx_compile.html
-
+/**
+ * [Counter]
+ * @param  {Boolean}                  [description]
+ * @param  {[type]}                   [description]
+ * @param  {[type]}                   [description]
+ * @return {[type]}                   [description]
+ */
 "use strict";
 
 var Counter = React.createClass({
@@ -19,14 +24,24 @@ var Counter = React.createClass({
       return { clickCount: state.clickCount + 1 };
     });
   },
+
   render: function render() {
     return React.createElement(
-      "h2",
-      { onClick: this.handleClick },
-      "点我点我! ",
-      React.createElement("br", null),
-      "被戳次数: ",
-      this.state.clickCount
+      "div",
+      null,
+      React.createElement(
+        "p",
+        null,
+        this.props.name
+      ),
+      React.createElement(
+        "h2",
+        { onClick: this.handleClick },
+        "点我点我! ",
+        React.createElement("br", null),
+        "被戳次数: ",
+        this.state.clickCount
+      )
     );
   }
 });
